@@ -1,0 +1,25 @@
+<h1>Listing user_schedules</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_schedules.each do |user_schedule| %>
+  <tr>
+    <td><%= user_schedule.date %></td>
+    <td><%= user_schedule.status %></td>
+    <td><%= link_to 'Show', user_schedule %></td>
+    <td><%= link_to 'Edit', edit_user_schedule_path(user_schedule) %></td>
+    <td><%= link_to 'Destroy', user_schedule, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User schedule', new_user_schedule_path %>

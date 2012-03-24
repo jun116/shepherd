@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @user_schedule.date %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @user_schedule.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_schedule_path(@user_schedule) %> |
+<%= link_to 'Back', user_schedules_path %>

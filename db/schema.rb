@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120324140343) do
+ActiveRecord::Schema.define(:version => 20120407050637) do
 
   create_table "user_schedules", :force => true do |t|
     t.date     "date"
@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(:version => 20120324140343) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "screen_name"
+    t.string   "image"
   end
 
 end
